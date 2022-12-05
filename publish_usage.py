@@ -7,6 +7,9 @@ import random
 import time
 import operations
 import numpy as np
+import psutil
+import GPUtil
+import matplotlib.pyplot as plt
 
 # These are the global variables ->
 
@@ -31,10 +34,17 @@ def publish_to_mqtt(topic, config):
             set_host = config["host"][count]
             if(count == max_count) :
                 count = 0
-            usage = random.randint(0, 30) 
+            usage = psutil.cpu_percent()
+            #usage = psutil.virtual_memory().percent
+            #usage = GPUtil.showUtilization()
+            #print(psutil.virtual_memory().percent)
+            #cpu_bar = "█" * int(usage)
+            print(usage)
+            print(f"Published: {int(usage)} in {set_host}")
+            #print(f"Published: {cpu_bar}")
+            #client.publish(topic + "/" + set_host, {cpu_bar})
             client.publish(topic + "/" + set_host, int(usage))
-            print(f"Published: {usage} in {set_host}")
-            time.sleep(1)
+            time.sleep(1) 
 
 if __name__ == "__main__":
     main()

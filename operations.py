@@ -2,7 +2,8 @@
 
 import paho.mqtt.client as mqtt
 import json
-#import numpy as np
+import numpy as np
+import matplotlib.pyplot as plt# Plotting the axis
 
 config_file = "config.json" #Config info
 
