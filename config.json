@@ -1,0 +1,8 @@
+{
+    "topic": "JT",
+    "broker": "mqtt.eclipseprojects.io",
+    "host": [
+        "CPU_1",
+        "CPU_2"
+    ]
+}
