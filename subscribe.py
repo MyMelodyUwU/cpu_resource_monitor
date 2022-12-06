@@ -3,6 +3,7 @@
 import paho.mqtt.client as mqtt
 import time
 import operations
+import json
 
 # These variables are global!
 
@@ -21,6 +22,7 @@ def main(host):
 	client.connect(config["broker"]) 
 	print(config["topic"])
 	recieve_msg(client, config["topic"], host)
+	change_list_to_json(list_cpu_input)
 	content = serve_content()
 	#sql_functions.save_content(list_cpu_input)
 	return content
@@ -40,8 +42,12 @@ def on_message(client, userdata, message):
 	#print("received message: " ,decoded_message)
 	list_cpu_input.append(decoded_message)
 
+def change_list_to_json(list_cpu_input):
+	list_cpu_input = json.dumps(list_cpu_input)
+
+
 def serve_content():
-	content = "The current collected usage for" + str(list_cpu_input) + ", the average is" + str(do_operations(list_cpu_input))
+	content = "The current collected CPU Information is " + str(list_cpu_input)
 	return content
 
 if __name__ == '__main__':

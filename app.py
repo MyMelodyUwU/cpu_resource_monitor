@@ -20,10 +20,10 @@ app = Flask(__name__)
 
 def serve_page(host):
 
-	transaction_lock.acquire()
+	#transaction_lock.acquire()
 	content = subscribe.main(host) 
 	# this function calls the subscibe script. 
-	transaction_lock.release()
+	#transaction_lock.release()
 
 	return content
 

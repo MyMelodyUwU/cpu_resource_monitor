@@ -10,22 +10,40 @@ import numpy as np
 import psutil
 import GPUtil
 import matplotlib.pyplot as plt
+import json
+import click
 
 # These are the global variables ->
 
 client = mqtt.Client()
 
+broker = ""
+topic = ""
+#host = ""
+
 # These functions are in alphabetical order! It shows the order the computer
 
-def main():
-    print("Waking up")
-    config = operations.read()
-    topic = config["topic"]
-    #host = config["host"]
-    client.connect(config["broker"]) 
-    publish_to_mqtt(topic, config)
+@click.command()
+@click.option('--broker', default="mqtt.eclipseprojects.io", help='Broker to Connect To [Default is MQTT Eclipse Projects].')
+@click.option('--topic', default='JT', help='Topic name')
+#@click.option('--host', default='CPU_1', help='Thread name')
 
-def publish_to_mqtt(topic, config): 
+def take_inputs(broker, topic):
+    print(broker)
+    print(topic)
+    main()
+
+def main():
+    print("hello")
+    config = operations.read()
+    #host = config["host"]
+    if broker == "":
+        client.connect(config["broker"]) 
+    else:
+        client.connect(broker)
+    publish_to_mqtt(config)
+
+def publish_to_mqtt(config): 
     while True:
         count = -1
         max_count = 0
@@ -34,17 +52,18 @@ def publish_to_mqtt(topic, config):
             set_host = config["host"][count]
             if(count == max_count) :
                 count = 0
-            usage = psutil.cpu_percent()
-            #usage = psutil.virtual_memory().percent
-            #usage = GPUtil.showUtilization()
-            #print(psutil.virtual_memory().percent)
-            #cpu_bar = "█" * int(usage)
-            print(usage)
-            print(f"Published: {int(usage)} in {set_host}")
-            #print(f"Published: {cpu_bar}")
+            cpu_info = {
+                "cpu_percent" : psutil.cpu_percent(interval=1,percpu=True),
+                "cpu_times" : psutil.cpu_times(), 
+                "cpu_count": psutil.cpu_count(logical=False),
+                "cpu_stats": psutil.cpu_stats(),
+                "cpu_freq" : psutil.cpu_freq()
+            }
+            payload = json.dumps(cpu_info)
             #client.publish(topic + "/" + set_host, {cpu_bar})
-            client.publish(topic + "/" + set_host, int(usage))
+            print(f"Published: {payload} in {set_host}")
+            client.publish(topic + "/" + set_host, payload=payload)
             time.sleep(1) 
 
 if __name__ == "__main__":
-    main()
+    take_inputs()
