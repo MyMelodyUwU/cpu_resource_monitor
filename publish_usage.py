@@ -12,12 +12,12 @@ import GPUtil
 import matplotlib.pyplot as plt
 import json
 import click
+import sys
 
 # These are the global variables ->
 
 client = mqtt.Client()
 
-broker = ""
 topic = ""
 #host = ""
 
@@ -29,21 +29,18 @@ topic = ""
 #@click.option('--host', default='CPU_1', help='Thread name')
 
 def take_inputs(broker, topic):
-    print(broker)
-    print(topic)
     main()
 
 def main():
-    print("hello")
     config = operations.read()
     #host = config["host"]
-    if broker == "":
-        client.connect(config["broker"]) 
-    else:
-        client.connect(broker)
+    client.connect(config["broker"])
     publish_to_mqtt(config)
 
 def publish_to_mqtt(config): 
+    print(config["topic"])
+    print(config["broker"])
+    print(config["host"])
     while True:
         count = -1
         max_count = 0
@@ -55,14 +52,14 @@ def publish_to_mqtt(config):
             cpu_info = {
                 "cpu_percent" : psutil.cpu_percent(interval=1,percpu=True),
                 "cpu_times" : psutil.cpu_times(), 
-                "cpu_count": psutil.cpu_count(logical=False),
-                "cpu_stats": psutil.cpu_stats(),
+                #"cpu_count": psutil.cpu_count(logical=False),
+                #"cpu_stats": psutil.cpu_stats(),
                 "cpu_freq" : psutil.cpu_freq()
             }
             payload = json.dumps(cpu_info)
             #client.publish(topic + "/" + set_host, {cpu_bar})
+            client.publish(topic + "/" + set_host, (payload))
             print(f"Published: {payload} in {set_host}")
-            client.publish(topic + "/" + set_host, payload=payload)
             time.sleep(1) 
 
 if __name__ == "__main__":
