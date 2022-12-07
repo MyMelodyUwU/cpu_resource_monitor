@@ -17,7 +17,8 @@ import time
 
 client = mqtt.Client()
 
-topic = ""
+global_broker = ""
+global_topic = ""
 #host = ""
 
 # These functions are in alphabetical order! It shows the order the computer
@@ -27,12 +28,15 @@ topic = ""
 @click.option('--topic', default='JT', help='Topic name')
 #@click.option('--host', default='CPU_1', help='Thread name')
 
-def take_inputs(broker, topic):
-    main()
+# def take_inputs(broker, topic):
+#     broker_topic = (broker, topic)
+#     return broker_topic
 
-def main():
+def main(broker, topic):
+    #broker, topic = take_inputs()
     config = operations.read()
     #host = config["host"]
+    #client.connect(broker)
     client.connect(config["broker"])
     publish_to_mqtt(config)
 
@@ -45,11 +49,10 @@ def publish_to_mqtt(config):
             set_host = config["host"][count]
             if(count == max_count) :
                 count = 0
-            cpu_payload = operations.create_payload()
-            #client.publish(topic + "/" + set_host, {cpu_bar})
-            client.publish(topic + "/" + set_host, (cpu_payload))
+            cpu_payload = operations.make_payload()
+            client.publish(config["topic"] + "/" + set_host, (cpu_payload))
             print(f"Published: {cpu_payload} in {set_host}")
             time.sleep(1) 
 
 if __name__ == "__main__":
-    take_inputs()
+    main()

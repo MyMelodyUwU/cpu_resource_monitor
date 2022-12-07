@@ -12,7 +12,7 @@ USE_LOCK = True
 
 transaction_lock = ThreadingLock()
 
-import subscribe  #References the subscribe script. 
+import aggregator #References the subscribe script. 
 
 app = Flask(__name__)
 
@@ -21,7 +21,7 @@ app = Flask(__name__)
 def serve_page(host):
 
 	#transaction_lock.acquire()
-	content = subscribe.main(host) 
+	content = aggregator.main(host) 
 	# this function calls the subscibe script. 
 	#transaction_lock.release()
 
