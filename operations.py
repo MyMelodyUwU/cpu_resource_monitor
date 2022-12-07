@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-import paho.mqtt.client as mqtt
 import json
-import numpy as np
 import matplotlib.pyplot as plt# Plotting the axis
+import numpy as np
+import paho.mqtt.client as mqtt
 import psutil
 
 config_file = "config.json" #Config info

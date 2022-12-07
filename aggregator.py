@@ -1,8 +1,10 @@
 #!usr/bin/env python3
 
+import json
 import operations
 import paho.mqtt.client as mqtt
 import time
+import unit_tests
 #import sql_functions
 
 # These variables are global!
@@ -20,9 +22,16 @@ def main(host):
 	client = operations.make_connection()
 	client.connect(config["broker"]) 
 	recieve_msg(client, config["topic"], host)
+	unit_tests.check_cpu(list_cpu_input)
+
 	content = serve_content()
 	#sql_functions.save_content(list_cpu_input)
 	return content
+
+def on_message(client, userdata, message):
+	decoded_message = str(message.payload.decode("utf-8"))
+	#print("received message: " ,decoded_message)
+	list_cpu_input.append(decoded_message)
 
 def recieve_msg(client, topic, host):
 
@@ -31,13 +40,8 @@ def recieve_msg(client, topic, host):
 	client.subscribe(topic + "/" + host)
 	client.on_message=on_message 
 
-	time.sleep(60)
+	time.sleep(5)
 	client.loop_stop()
-
-def on_message(client, userdata, message):
-	decoded_message = str(message.payload.decode("utf-8"))
-	#print("received message: " ,decoded_message)
-	list_cpu_input.append(decoded_message)
 
 def serve_content():
 	content = "The current collected usage for" + str(list_cpu_input)
