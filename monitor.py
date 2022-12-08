@@ -50,7 +50,6 @@ def publish_to_mqtt(config):
             if(count == max_count) :
                 count = 0
             cpu_payload = operations.make_payload()
-            print(type(cpu_payload))
             client.publish(config["topic"] + "/" + set_host, (cpu_payload))
             print(f"Published: {cpu_payload} in {set_host}")
             time.sleep(1) 

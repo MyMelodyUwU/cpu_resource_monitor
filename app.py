@@ -3,6 +3,7 @@
 import queue
 from threading import Thread
 from threading import Lock as ThreadingLock
+import logging
 
 from flask import Flask
 
@@ -18,6 +19,8 @@ import aggregator #References the subscribe script.
 
 app = Flask(__name__)
 
+#logger = logging.getLogger('my_logs')
+
 @app.route('/CPU/<host>', methods=['GET'])
 
 def serve_page(host):
@@ -27,6 +30,7 @@ def serve_page(host):
 	# this function calls the subscibe script. 
 	#transaction_lock.release()
 	content = aggregator_object
+	#logger.info(content)
 	return content
 
 def main():
