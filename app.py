@@ -6,6 +6,8 @@ from threading import Lock as ThreadingLock
 
 from flask import Flask
 
+import json
+
 run_subscribe = True
 
 USE_LOCK = True
@@ -21,10 +23,10 @@ app = Flask(__name__)
 def serve_page(host):
 
 	#transaction_lock.acquire()
-	content = aggregator.main(host) 
+	aggregator_object = aggregator.main(host)
 	# this function calls the subscibe script. 
 	#transaction_lock.release()
-
+	content = aggregator_object
 	return content
 
 def main():

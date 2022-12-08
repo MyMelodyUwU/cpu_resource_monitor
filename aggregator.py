@@ -22,11 +22,10 @@ def main(host):
 	client = operations.make_connection()
 	client.connect(config["broker"]) 
 	recieve_msg(client, config["topic"], host)
-	unit_tests.check_cpu(list_cpu_input)
-
-	content = serve_content()
+	#unit_tests.check_cpu(list_cpu_input)
+	content_served = list_cpu_input
 	#sql_functions.save_content(list_cpu_input)
-	return content
+	return content_served
 
 def on_message(client, userdata, message):
 	decoded_message = str(message.payload.decode("utf-8"))
@@ -42,10 +41,6 @@ def recieve_msg(client, topic, host):
 
 	time.sleep(5)
 	client.loop_stop()
-
-def serve_content():
-	content = "The current collected usage for" + str(list_cpu_input)
-	return content
 
 if __name__ == '__main__':
 	main()

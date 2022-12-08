@@ -28,8 +28,8 @@ def make_payload():
 	cpu_info = {
                 "cpu_percent" : psutil.cpu_percent(interval=1,percpu=True),
                 "cpu_times" : psutil.cpu_times(), 
-                #"cpu_count": psutil.cpu_count(logical=False),
-                #"cpu_stats": psutil.cpu_stats(),
+                "cpu_count": psutil.cpu_count(logical=False),
+                "cpu_stats": psutil.cpu_stats(),
                 "cpu_freq" : psutil.cpu_freq()
             }
 	return json.dumps(cpu_info)

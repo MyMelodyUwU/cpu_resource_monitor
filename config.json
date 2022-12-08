@@ -1,5 +1,5 @@
 {
-    "topic": "JT",
+    "topic": "Resources",
     "broker": "mqtt.eclipseprojects.io",
     "host": [
         "CPU_1",
