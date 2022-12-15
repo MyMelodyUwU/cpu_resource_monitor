@@ -5,7 +5,8 @@ from threading import Thread
 from threading import Lock as ThreadingLock
 import logging
 
-from flask import Flask
+from flask import Flask 
+from flask import jsonify
 
 import json
 
@@ -32,6 +33,16 @@ def serve_page(host):
 	content = aggregator_object
 	#logger.info(content)
 	return content
+
+"""
+def serve_as_table(content):
+	html_table = "<table>"
+	print("Hello")
+	html_table += "<tr><td>{}</td>".format(content["cpu_percent"])
+	html_table += "</table>"
+	print(html_table)
+	return html_table
+"""
 
 def main():
 	run_sub_thread = Thread(target = run_subscribe)
