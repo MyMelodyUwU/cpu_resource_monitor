@@ -1,15 +1,28 @@
 # cpu_resource_monitor
 
-## This is a CPU resource monitor used on Cloud Systems. 
+### Overview
 
-### How to Interpret the script:
+CPU resource monitor used system resource usage
+
+### Installation
  
 ```
-pip install -r requirements.txt
-chmod +x aggregator.py
-chmod +x app.py
-chmod +x monitor.py
+python3 -m venv env_resource
+source env_resource/bin/activate
+./install.sh
+```
 
+### Usage
+
+Terminal session 1
+```
 ./app.py
-./monitor.py --broker <Your Broker Here> --topic <Your Topic Here>
+```
+
+Terminal session 2
+```
+MQTT_HOST=localhost
+MQTT_TOPIC=cpu_usage
+SAMPLE_PERIOD=1
+./monitor.py MQTT_HOST $MQTT_TOPIC $SAMPLE_PERIOD
 ```

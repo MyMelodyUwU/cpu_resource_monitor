@@ -1,22 +1,18 @@
 #!/usr/bin/env python3
 
-import queue
-from threading import Thread
-from threading import Lock as ThreadingLock
-import logging
-
-from flask import Flask 
-from flask import jsonify
-
+from flask import Flask, jsonify
 import json
+import logging
+import queue
+from threading import Thread, Lock as ThreadingLock
+
+import aggregator # References the subscribe script. 
 
 run_subscribe = True
 
 USE_LOCK = True
 
 transaction_lock = ThreadingLock()
-
-import aggregator #References the subscribe script. 
 
 app = Flask(__name__)
 
