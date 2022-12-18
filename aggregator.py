@@ -1,7 +1,7 @@
 #!usr/bin/env python3
 
 import json
-import operations
+#import operations
 import paho.mqtt.client as mqtt
 import time
 import unit_tests

@@ -10,6 +10,9 @@ def check_cpu(list_of_temps):
 
 	return 0
 
+def check_json():
+
+	return 0	
 
 if __name__ == '__main__':
 	main()

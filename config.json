@@ -1,8 +1,5 @@
 {
-    "topic": "Resources",
-    "broker": "mqtt.eclipseprojects.io",
-    "host": [
-        "CPU_1",
-        "CPU_2"
-    ]
-}
+    "mqtt": {
+        "host": "localhost",
+        "topic": "cpu_usage/host_1",
+        "client": 

@@ -3,5 +3,5 @@ Flask==2.2.2
 Flask-MQTT==1.1.1
 GPUtil==1.4.0
 paho-mqtt==1.6.1
-psutil=5.9.4
+psutil==5.9.4
 requests==2.25.1
