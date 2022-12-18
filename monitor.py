@@ -8,7 +8,6 @@
 #   - "mqtt_host", i.e the MQTT server
 #   - "host_name", i.e the name of the host being monitored
 #     - Construct the MQTT topic using this CLI argument
-#     - [x] Consider using "import os; os.uname()[1]"
 # - Provide CLI argument to save configuration as a JSON file
 # - Provide CLI argument to load configuration from a JSON file
 # - Write some unit tests
@@ -35,11 +34,11 @@ def initialize_mqtt(mqtt_configuration):
     client.connect(mqtt_configuration["host"])
 
 def sample_cpu_specs():
-    os_uname = os.uname()[1]
+    host_name = os.uname()[1]
     cpu_architecture = {
         "count": psutil.cpu_count(logical=False),
         "processor_type": platform.processor(),
-        "uname": os_uname
+        "host_name": host_name
     }
 
     return cpu_architecture
