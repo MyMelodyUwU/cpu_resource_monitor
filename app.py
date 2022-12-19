@@ -1,46 +1,29 @@
 #!/usr/bin/env python3
 
+import aggregator # References the subscribe script. 
+
 import click 
 from flask import Flask, jsonify
 import json
 import logging
 import queue
+import unit_tests
 from threading import Thread, Lock as ThreadingLock
-
-import aggregator # References the subscribe script. 
 
 run_subscribe = True
 
-USE_LOCK = True
-
-transaction_lock = ThreadingLock()
-
 app = Flask(__name__)
-
-#logger = logging.getLogger('my_logs')
 
 @app.route('/cpu_usage/<host>', methods=['GET'])
 
 def serve_page(host):
 
-	#transaction_lock.acquire()
 	aggregator_object = aggregator.main(host)
-	# this function calls the subscibe script. 
-	#transaction_lock.release()
 	content = aggregator_object
-	print(content)
+	print(type(content))
+	unit_tests.test_serve_page(content)
 	#logger.info(content)
 	return content
-
-"""
-def serve_as_table(content):
-	html_table = "<table>"
-	print("Hello")
-	html_table += "<tr><td>{}</td>".format(content["cpu_percent"])
-	html_table += "</table>"
-	print(html_table)
-	return html_table
-"""
 
 @click.command()
 @click.argument("host", default="localhost")

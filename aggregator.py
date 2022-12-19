@@ -19,7 +19,6 @@ client = mqtt.Client()
 topic = ""
 host = ""
 
-
 def main(host):
 	file = open(config_file, "r")
 	config = json.loads(file.read())
@@ -27,17 +26,14 @@ def main(host):
 	topic = config["mqtt"]["topic"]
 	client.connect(host)
 	recieve_msg(client,topic, host)
-	print("hello")
 	content_served = list_cpu_input
-    # sql_functions.save_content(list_cpu_input)
-	return content_served
 
+	return content_served
 
 def on_message(client, userdata, message):
     decoded_message = str(message.payload.decode("utf-8"))
     print("received message: ", decoded_message)
     list_cpu_input.append(decoded_message)
-
 
 def recieve_msg(client, topic, host):
 	client.loop_start()
@@ -45,7 +41,6 @@ def recieve_msg(client, topic, host):
 	client.on_message = on_message
 	time.sleep(5)
 	client.loop_stop()
-
 
 if __name__ == "__main__":
     main()
