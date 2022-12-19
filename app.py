@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import click 
 from flask import Flask, jsonify
 import json
 import logging
@@ -18,7 +19,7 @@ app = Flask(__name__)
 
 #logger = logging.getLogger('my_logs')
 
-@app.route('/CPU/<host>', methods=['GET'])
+@app.route('/cpu_usage/<host>', methods=['GET'])
 
 def serve_page(host):
 
@@ -27,6 +28,7 @@ def serve_page(host):
 	# this function calls the subscibe script. 
 	#transaction_lock.release()
 	content = aggregator_object
+	print(content)
 	#logger.info(content)
 	return content
 
@@ -40,7 +42,12 @@ def serve_as_table(content):
 	return html_table
 """
 
-def main():
+@click.command()
+@click.argument("host", default="localhost")
+@click.argument("topic", default="cpu_usage/host_1")
+@click.argument("sample_period", default=1)
+
+def main(host, topic, sample_period):
 	run_sub_thread = Thread(target = run_subscribe)
 
 	run_sub_thread.start() 

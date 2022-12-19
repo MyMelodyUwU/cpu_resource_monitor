@@ -1,5 +1,6 @@
 {
-    "mqtt": {
-        "host": "localhost",
-        "topic": "cpu_usage/host_1",
-        "client": 
+	"mqtt": {
+		"host": "mqtt.eclipseprojects.io",
+		"topic": "cpu_usage/host_1"
+	}
+}

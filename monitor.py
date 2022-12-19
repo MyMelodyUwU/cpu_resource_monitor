@@ -59,19 +59,21 @@ def publish_to_mqtt(mqtt_configuration, dict_input):
     payload = json.dumps(dict_input)
     mqtt_client.publish(mqtt_topic, payload)
 
+"""
 def save_to_json(configuration):
 	with open("config.json", "w") as file:
 		json.dump(configuration, file, indent=4)
 		print("written")
+"""
 
 @click.command()
-@click.argument("host", default="localhost")
+@click.argument("host", default="mqtt.eclipseprojects.io")
 @click.argument("topic", default="cpu_usage/host_1")
 @click.argument("sample_period", default=1)
 def main(host, topic, sample_period):
 	configuration = initialize(host, topic, sample_period)
 	print(configuration)
-	save_to_json(configuration)
+	#save_to_json(configuration)
 	cpu_architecture = sample_cpu_specs()
 	print(f"cpu_architecture: {cpu_architecture}")
 	publish_to_mqtt(configuration["mqtt"], cpu_architecture)
