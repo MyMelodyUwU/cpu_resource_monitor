@@ -18,12 +18,12 @@ app = Flask(__name__)
 
 def serve_page(host):
 
-	aggregator_object = aggregator.main(host)
-	content = aggregator_object
-	print(type(content))
-	unit_tests.test_serve_page(content)
-	#logger.info(content)
-	return content
+    aggregator_object = aggregator.main(host)
+    content = aggregator_object
+    print(type(content))
+    unit_tests.test_serve_page(content)
+    #logger.info(content)
+    return content
 
 @click.command()
 @click.argument("host", default="localhost")
@@ -31,11 +31,9 @@ def serve_page(host):
 @click.argument("sample_period", default=1)
 
 def main(host, topic, sample_period):
-	run_sub_thread = Thread(target = run_subscribe)
-
-	run_sub_thread.start() 
-
-	run_sub_thread.join()
+    run_sub_thread = Thread(target = run_subscribe)
+    run_sub_thread.start() 
+    run_sub_thread.join()
 
 if __name__ == '__main__':
-	app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0')
