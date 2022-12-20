@@ -1,40 +1,23 @@
 #!/usr/bin/env python3
+#
+# To Do
+# ~~~~~
+# - Clean-up database connection, how ?
 
-import aggregator # References the subscribe script. 
-
-import click 
 from flask import Flask, jsonify
-import json
-import logging
-import queue
-import unit_tests
-from threading import Thread, Lock as ThreadingLock
 
-run_subscribe = True
+import utilities
 
 app = Flask(__name__)
+connection = None
 
-@app.route('/cpu_usage/<host>', methods=['GET'])
-
-def serve_page(host):
-
-    aggregator_object = aggregator.main(host)
-    content = aggregator_object
-    print(type(content))
-    unit_tests.test_serve_page(content)
-    #logger.info(content)
-    return content
-
-@click.command()
-@click.argument("host", default="localhost")
-@click.argument("topic", default="cpu_usage/host_1")
-@click.argument("sample_period", default=1)
-
-def main(host, topic, sample_period):
-    run_sub_thread = Thread(target = run_subscribe)
-    run_sub_thread.start() 
-    run_sub_thread.join()
+@app.route('/cpu_usage', methods=['GET'])
+def serve_page():
+    global connection  # TODO: Fix this !
+    if not connection:
+        connection = utilities.initialize_database()
+    cpu_usage = utilities.read_records(connection)
+    return cpu_usage
 
 if __name__ == '__main__':
-#   main()
     app.run(debug=True, host='0.0.0.0')

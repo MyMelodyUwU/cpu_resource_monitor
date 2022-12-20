@@ -4,6 +4,8 @@
 #
 # To Do
 # ~~~~~
+# BUG: Should publish "cpu_architecture" as a retained message
+#
 # - Implement logging
 # - Disambigute CLI "host" argument into ...
 #   - "mqtt_host", i.e the MQTT server
