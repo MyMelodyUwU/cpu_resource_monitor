@@ -1,46 +1,36 @@
-#!usr/bin/env python3
+#!/usr/bin/python3
 
 import click
-import json
-import paho.mqtt.client as mqtt
 import time
 
-# import time
-import unit_tests
-
-# import sql_functions
-
-
-# These variables are global!
+import utilities
 
 list_cpu_input = []
-config_file = "config.json"
-client = mqtt.Client()
-topic = ""
-host = ""
-
-def main(host):
-    file = open(config_file, "r")
-    config = json.loads(file.read())
-    host = config["mqtt"]["host"]
-    topic = config["mqtt"]["topic"]
-    client.connect(host)
-    receive_msg(client,topic, host)
-    content_served = list_cpu_input
-
-    return content_served
 
 def on_message(client, userdata, message):
-    decoded_message = str(message.payload.decode("utf-8"))
-    print("received message: ", decoded_message)
-    list_cpu_input.append(decoded_message)
+    topic = message.topic
+    payload = str(message.payload.decode("utf-8"))
+    print(f"Received {topic}: {payload}")
+    list_cpu_input.append(payload)
 
-def receive_msg(client, topic, host):
-    client.loop_start()
-    client.subscribe(topic)
-    client.on_message = on_message
-    time.sleep(5)
-    client.loop_stop()
+def initialize(host, topic_subscribe):
+    configuration = {
+        "mqtt": {
+            "host": host,
+            "on_message": on_message,
+            "topic_subscribe": topic_subscribe
+        }
+    }
+    utilities.initialize_mqtt(configuration["mqtt"])
+    return configuration
+
+@click.command()
+@click.argument("host", default="localhost")
+@click.argument("topic_subscribe", default="cpu_usage/#")
+def main(host, topic_subscribe):
+    configuration = initialize(host, topic_subscribe)
+    while True:
+        time.sleep(1)
 
 if __name__ == "__main__":
     main()

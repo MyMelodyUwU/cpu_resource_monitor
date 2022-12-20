@@ -22,9 +22,9 @@ import time
 import unit_tests
 import utilities
 
-def initialize(host, topic, sample_period):
+def initialize(host, topic_publish, sample_period):
     configuration = {
-        "mqtt": {"host": host, "topic": topic},
+        "mqtt": {"host": host, "topic_publish": topic_publish},
         "sample_period": sample_period,
     }
     utilities.initialize_mqtt(configuration["mqtt"])
@@ -51,10 +51,10 @@ def sample_cpu_usage():
 
 @click.command()
 @click.argument("host", default="localhost")
-@click.argument("topic", default="cpu_usage/host_1")
+@click.argument("topic_publish", default="cpu_usage/host_1")
 @click.argument("sample_period", default=1)
-def main(host, topic, sample_period):
-    configuration = initialize(host, topic, sample_period)
+def main(host, topic_publish, sample_period):
+    configuration = initialize(host, topic_publish, sample_period)
 #   utilities.save_configuration(configuration)
     cpu_architecture = sample_cpu_specs()
     print(f"cpu_architecture: {cpu_architecture}")

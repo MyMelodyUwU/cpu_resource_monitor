@@ -36,4 +36,5 @@ def main(host, topic, sample_period):
     run_sub_thread.join()
 
 if __name__ == '__main__':
+#   main()
     app.run(debug=True, host='0.0.0.0')
