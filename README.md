@@ -29,4 +29,4 @@ SAMPLE_PERIOD=1
 
 Diagram (conceptual view): 
 
-https://github.com/MyMelodyUwU/cpu_resource_monitor/blob/master/image.png
+https://github.com/MyMelodyUwU/cpu_resource_monitor/blob/master/resources/design_diagram.png
