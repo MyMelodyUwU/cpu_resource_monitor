@@ -26,3 +26,7 @@ MQTT_TOPIC=cpu_usage
 SAMPLE_PERIOD=1
 ./monitor.py MQTT_HOST $MQTT_TOPIC $SAMPLE_PERIOD
 ```
+
+Diagram (conceptual view): 
+
+https://github.com/MyMelodyUwU/cpu_resource_monitor/blob/master/image.png
