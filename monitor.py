@@ -57,10 +57,10 @@ def sample_cpu_usage():
 @click.argument("sample_period", default=1)
 def main(host, topic_publish, sample_period):
     configuration = initialize(host, topic_publish, sample_period)
-#   utilities.save_configuration(configuration)
+    #utilities.save_configuration(configuration)
     cpu_architecture = sample_cpu_specs()
     print(f"cpu_architecture: {cpu_architecture}")
-    utilities.publish_to_mqtt(configuration["mqtt"], cpu_architecture)
+    utilities.publish_to_mqtt(configuration["mqtt"], cpu_architecture, retain = True)
     while True:
         cpu_usage = sample_cpu_usage()
         print(f"cpu_usage: {cpu_usage}")

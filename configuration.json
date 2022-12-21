@@ -1,0 +1,5 @@
+{
+    "mqtt": {
+        "host": "localhost",
+        "topic_publish": "cpu_usage/host_1",
+        "client": 
