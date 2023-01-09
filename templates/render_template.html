@@ -1,0 +1,19 @@
+
+<head>hello</head>
+
+<table class="table">
+<thead class="thead-primary">
+
+<table>
+  <tr>
+    <th>abc</th>
+    <th>abc</th>
+  </tr>
+  {% for column in data %}
+  <tr>
+    {% for row in data %}
+    <td>{{ column[0], row[0] }}</td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>

@@ -92,9 +92,9 @@ def create(host, topic_subscribe):
 def reset():
     print("Resetting database")
     utilities.reset_database()
-    connection = utilities.initialize_database()
-    utilities.create_database_tables(connection)
+    utilities.create_database_tables(connection)  # once only
     print("Resetting MQTT messages") 
+    # TODO Reset Exit
     utilities.reset_MQTT_retained()
 
 if __name__ == "__main__":

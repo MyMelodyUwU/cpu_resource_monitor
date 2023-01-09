@@ -1,0 +1,1000 @@
+  535  GET http://127.0.0.1:5000/cpu_usage/*
+  536  GET http://127.0.0.1:5000/cpu_usage/cpu_1
+  537  ls
+  538  v unit_tests.py 
+  539  v app.py 
+  540  ./app.py 
+  541  pip install paho-mqtt
+  542  ./app.py 
+  543  GET http://127.0.0.1:5000/cpu_usage/cpu_1
+  544  ./app.py 
+  545  GET http://127.0.0.1:5000/cpu_usage/cpu_1
+  546  v unit_tests.py 
+  547  GET http://127.0.0.1:5000/cpu_usage/cpu_1
+  548  git add . 
+  549  git stage .
+  550  git commit -m "Added a test case" 
+  551  git push origin master
+  552  ls
+  553  v app.py 
+  554  v aggregator.py 
+  555  git status
+  556  v git commit
+  557  ls
+  558  cd work/
+  559  s
+  560  ls
+  561  cd cpu_resource_monitor/
+  562  ls
+  563  hisotry 
+  564  history
+  565  tmux attach -t pair1
+  566  tmux attach -t pair1-1
+  567  ls
+  568  cd work/
+  569  ls
+  570  cd cpu_resource_monitor/
+  571  s
+  572  ls
+  573  v ~/.bashrc
+  574  v ~/.vimrc
+  575  python3 -m venv resource_mon
+  576  source resource_mon /bin/activate
+  577  source resource_mon/bin/activate
+  578  ls
+  579  ./monitor.py 
+  580  pip install click
+  581  ./monitor.py 
+  582  pip install -r requirements.txt 
+  583  ./monitor.py 
+  584  pip install GPUtil
+  585  ./monitor.py 
+  586  pip install numpy
+  587  ./monitor.py 
+  588  v monitor.py 
+  589  pip install -r requirements.txt 
+  590  v monitor.py 
+  591  ./monitor.py 
+  592  pip install matplotlib
+  593  ./monitor.py 
+  594  pip install paho
+  595  pip install paho-mqtt
+  596  ./monitor.py 
+  597  pip install psutil
+  598  ./monitor.py 
+  599  history
+  600  ./monitor.py 
+  601  v monitor.py 
+  602  ./monitor.py 
+  603  ls
+  604  git pull origin master
+  605  ls
+  606  git log
+  607  cl -l
+  608  alias ls=ls
+  609  alias cl='clear; ls'
+  610  cl -l
+  611  more README.md 
+  612  vi README.md 
+  613  cl -l
+  614  vi README.md 
+  615  vi -b *
+  616  cl -l
+  617  pip list
+  618  deactivate
+  619  source env_resource/bin/activate
+  620  cl -l
+  621  pip list
+  622  cat requirements.txt 
+  623  pip install wheel
+  624  vi requirements.txt 
+  625  cl -l
+  626  deactivate
+  627  rm -rf env_resource/
+  628  python3 -m venv env_resource
+  629  source env_resource/bin/activate
+  630  pip list
+  631  ./install.sh 
+  632  vi requirements.txt 
+  633  vi install.sh 
+  634  cl-l
+  635  cl -
+  636  cl -l
+  637  rm -rf env_resource/
+  638  python3 -m venv env_resource
+  639  source env_resource/bin/activate
+  640  pip list
+  641  ./install.sh 
+  642  cl -l
+  643  vi README.md 
+  644  cl -l
+  645  ./app.py 
+  646  cl -l
+  647  vi monitor.py 
+  648  mosquitto_sub -t '#' -v
+  649  vi monitor.py 
+  650  while 1; do :; done
+  651  while true; do :; done
+  652  while true; do :; done &
+  653  ps ax
+  654  ps ax | wc
+  655  top
+  656  cl -l
+  657  jobs
+  658  kill %1 %2 %3 %4
+  659  cl -l
+  660  ./monitor.py &
+  661  jobns
+  662  kill %1 %2
+  663  vi monitor.py 
+  664  mosquitto_sub -t '#' -v
+  665  cl -l
+  666  vi monitor.py 
+  667  cl -l
+  668  vi monitor.py 
+  669  mosquitto_sub -t '#' -v
+  670  cl -l
+  671  vi monitor.py 
+  672  cl -l
+  673  more monitor.py 
+  674  vi monitor.py 
+  675  cl -l
+  676  vi monitor.py 
+  677  cl -l
+  678  vi aggregator.py 
+  679  vi monitor.py 
+  680  cl -l
+  681  ls
+  682  v monitor.py 
+  683  ls
+  684  v unit_tests.py 
+  685  ./monitor.py 
+  686  v monitor.py 
+  687  ./monitor.py 
+  688  pip install -r requirements.txt 
+  689  ./monitor.py 
+  690  pip install paho
+  691  pip install paho-mqtt
+  692  ./monitor.py 
+  693  pip install mqtt
+  694  ./monitor.py 
+  695  ls
+  696  python monitor.py 
+  697  ls
+  698  v monitor.py 
+  699  ./monitor.py 
+  700  v monitor.py 
+  701  ./monitor.py 
+  702  python monitor.py 
+  703  v monitor.py 
+  704  python monitor.py 
+  705  v monitor.py 
+  706  python monitor.py 
+  707  v monitor.py 
+  708  python monitor.py 
+  709  v monitor.py 
+  710  python monitor.py 
+  711  v monitor.py 
+  712  cl -l
+  713  git status
+  714  git status | more
+  715  git restore --staged env_resource
+  716  git status | more
+  717  git restore env_resource
+  718  git status | more
+  719  vi .gitignore
+  720  cat .gitignore 
+  721  git status
+  722  git restore --staged __pycache__/
+  723  git status
+  724  vi .gitignore 
+  725  git status
+  726  cat .gitignore 
+  727  git status
+  728  git restore .monitor.py.swp
+  729  git status
+  730  git restore --staged .monitor.py.swp
+  731  git status
+  732  vi .gitignore 
+  733  git status
+  734  git add .gitignore 
+  735  git status
+  736  cat .gitignore 
+  737  vi .gitignore 
+  738  cl -l
+  739  cp -a env_resource env_resource_backup
+  740  cl -l
+  741  git steatus
+  742  git status
+  743  rm -rf env_resource_backup/
+  744  vi .gitignore 
+  745  git status
+  746  git add .gitignore 
+  747  cl -l
+  748  git log
+  749  git status
+  750  git commit
+  751  which vim
+  752  export EDITOR=/usr/bin/vim
+  753  git commit
+  754  git status
+  755  git push
+  756  git pull --all
+  757  cl -l
+  758  cp -a env_resource env_resource_backup
+  759  cl- l
+  760  cl -l
+  761  git rm -rf env_resource
+  762  git status
+  763  git status | more
+  764  git commit
+  765  git push
+  766  cl -l
+  767  ls -l env_resource
+  768  ls -lR env_resource
+  769  qcl -l
+  770  cat .gitignore 
+  771  cl -l
+  772  git status
+  773  rm -rf env_resource
+  774  git status
+  775  cl -l
+  776  mv env_resource_backup env_resource
+  777  cl -l
+  778  git status
+  779  cat .gitignore 
+  780  cl -l
+  781  vi monitor.py 
+  782  echo $EDITOR
+  783  vi ~/.bashrc
+  784  cl -l
+  785  vi monitor.py 
+  786  git diff
+  787  vi monitor.py 
+  788  cl- l
+  789  cl -l
+  790  git status
+  791  git add monitor.py 
+  792  git log
+  793  git commit
+  794  cl -l
+  795  git log
+  796  cl -l
+  797  vi monitor.py 
+  798  v monitor.py 
+  799  ./monitor.py 
+  800  python3 monitor.py 
+  801  v monitor.py 
+  802  python3 monitor.py 
+  803  v monitor.py 
+  804  ./monitor.py --topic "CPU" --host "CPU_1"
+  805  python3 monitor.py --topic "CPU" --host "CPU_1"
+  806  monitor.py --help
+  807  python3 monitor.py --help
+  808  python3 monitor.py  --host "CPU" --topic "CPU_1"
+  809  python3 monitor.py  --HOST "CPU" --topic "CPU_1"
+  810  v monitor.py 
+  811  python3 monitor.py
+  812  v monitor.py 
+  813  black monitor.py 
+  814  v monitor.py 
+  815  v app.py 
+  816  v aggregator.py 
+  817  GET 127.0.0.1:5000/cpu_usage/cpu_1
+  818  cl -l
+  819  vi app.py 
+  820  file *.py
+  821  vi -b *.py
+  822  vi -b app.py 
+  823  vi app.py 
+  824  file z
+  825  cl -l
+  826  file z
+  827  vi z
+  828  vi -b z
+  829  rm 
+  830  rm z
+  831  cl -l
+  832  fgrep "\t" *.py
+  833  cl -l
+  834  grep -P "\t" *.py
+  835  grep -P "\t" *.py | wc
+  836  cl -l
+  837  grep -P "\t" *.py | cut -d: -f1 | uniz
+  838  grep -P "\t" *.py | cut -d: -f1 | unix
+  839  grep -P "\t" *.py | cut -d: -f1 | uniq
+  840  vi aggregator.py app.py monitor.py unit_tests.py 
+  841  cl -l
+  842  grep -P "\t" *.py | cut -d: -f1 | uniq
+  843  cl -l
+  844  vi app.py 
+  845  cl -l
+  846  git status
+  847  git add aggregator.py app.py monitor.py unit_tests.py 
+  848  git commit
+  849  cl -l
+  850  vi app.py 
+  851  cl -l
+  852  git status
+  853  git diff app.py
+  854  vi app.py 
+  855  cl -l
+  856  vi monitor.py 
+  857  git log monitor.py
+  858  git diff aa5a365df136aa5518c9a4f7427b1af63bf62b3b c7115d48251fa28b57db4164bf905f65f9da7cf5 monitor.py
+  859  vi monitor.py 
+  860  cl -l
+  861  vi aggregator.py 
+  862  cl -l
+  863  vi aggregator.py 
+  864  vi monitor.py 
+  865  cl -l
+  866  git status
+  867  git add monitor.py utilities.py 
+  868  git commmit
+  869  git commit
+  870  git log
+  871  cl -l
+  872  vi aggregator.py 
+  873  history 
+  874  history > mn
+  875  cat mn
+  876  v mn
+  877  cl
+  878  rm mn
+  879  cl -l
+  880  cat bob.txt 
+  881  cl -l
+  882  mv bob.txt z_bob.txt 
+  883  cl -l
+  884  vi app.py 
+  885  cl -l
+  886  vi aggregator.py 
+  887  cl -l
+  888  ./monitor.py 
+  889  cl -l
+  890  python monitor.py 
+  891  cl -l
+  892  vi aggregator.py 
+  893  mosquitto_pub -t cpu_usage/fred -m hello
+  894  vi aggregator.py 
+  895  cl -
+  896  cl -l
+  897  mosquitto_pub -t cpu_usage/fred -m hello
+  898  mosquitto_pub -t cpu_usage/tom -m goodber
+  899  cl -l
+  900  git status
+  901  git diff app.py
+  902  git mv app.py web_server.py
+  903  c l-l
+  904  cl -l
+  905  git status
+  906  git add aggregator.py monitor.py utilities.py web_server.py 
+  907  git commit
+  908  git push
+  909  cl -l
+  910  git pull --all
+  911  cl -l
+  912  mkdir resources
+  913  git mv image.png resources/design_diagram.png
+  914  vi README.md 
+  915  cl -l
+  916  git status
+  917  git add README.md 
+  918  git commit
+  919  cl-l
+  920  cl -
+  921  cl -l
+  922  git push
+  923  more README.md 
+  924  cl -l
+  925  python monitor.py 
+  926  vi monitor.py 
+  927  cl -l
+  928  vi aggregator.py 
+  929  cl -
+  930  cl -l
+  931  python monitor.py 
+  932  cl -l
+  933  python monitor.py 
+  934  vi aggregator.py 
+  935  cl -l
+  936  python monitor.py 
+  937  vi aggregator.py 
+  938  cl -l
+  939  python monitor.py 
+  940  vi aggregator.py 
+  941  cl -l
+  942  cl -
+  943  cl -l
+  944  python monitor.py 
+  945  cl -l
+  946  vi aggregator.py 
+  947  cl -l
+  948  python monitor.py 
+  949  vi utilities.py 
+  950  cl -l
+  951  rm resource
+  952  rm resource_usage.db 
+  953  cl -l
+  954  vi aggregator.py 
+  955  cl -l
+  956  vi aggregator.py 
+  957  cl -l
+  958  python monitor.py 
+  959  cl -l
+  960  vi aggregator.py 
+  961  cl -l
+  962  python monitor.py 
+  963  cl -l
+  964  vi aggregator.py 
+  965  cl -l
+  966  vi web_server.py 
+  967  GET 127.0.0.1:5000/cpu_usage/cpu_1https://www.youtube.com/watch?v=ZKZaxgVorYI
+  968  GET 127.0.0.1:5000/cpu_usage/cpu_1
+  969  GET 127.0.0.1:5000/cpu_usage/#cl -l
+  970  cl -l
+  971  vi web_server.py 
+  972  cl -l
+  973  GET 127.0.0.1:5000/cpu_usage/#cl -l
+  974  GET 127.0.0.1:5000/cpu_usage
+  975  GET 127.0.0.1:5000/cpu_usage/#
+  976  vi web_server.py 
+  977  cl -l
+  978  GET 127.0.0.1:5000/cpu_usage
+  979  vi web_server.py 
+  980  cl -l
+  981  GET 127.0.0.1:5000/cpu_usage
+  982  cl -l
+  983  git status
+  984  git add aggregator.py monitor.py utilities.py web_server.py 
+  985  git commit
+  986  git push
+  987  cl -l
+  988  git status
+  989  view z
+  990  rm z
+  991  cl -l
+  992  alias ls=ls
+  993  alias cl='clear; ls'
+  994  cl -l
+  995  chmod 775 x.py 
+  996  cl -l
+  997  ./x.py 
+  998  cl -l
+  999  cp x.py y.py
+ 1000  cl -l
+ 1001  vi y.py 
+ 1002  cd cpu
+ 1003  cd work/
+ 1004  cd cpu_resource_monitor/
+ 1005  ls
+ 1006  git push origin master
+ 1007  3EuPv7KlTtEpaXdVZExcUixeYj4kvyh2mtiO4PDFoOGBNMYCONTtB8FxDtc
+ 1008  git push origin master
+ 1009  cl -l
+ 1010  ggit log
+ 1011  cl -
+ 1012  lgit log
+ 1013  cl -l
+ 1014  git log
+ 1015  tmux
+ 1016  ls
+ 1017  cl -l
+ 1018  ls -l install.sh 
+ 1019  ./in
+ 1020  ./install.sh
+ 1021  chmod +x install.sh 
+ 1022  vi install.sh 
+ 1023  cl- l
+ 1024  alias ls=ls
+ 1025  alias cl='clear; ls;
+ 1026  cl -l
+ 1027  alias cl='clear; ls'
+ 1028  cl -l
+ 1029  chmod -x aggregator.py 
+ 1030  source env/bin/activate
+ 1031  cl -l
+ 1032  ls -l env
+ 1033  deactivate
+ 1034  rm -rf env
+ 1035  cl -l
+ 1036  git mv resource_mon env_resource
+ 1037  cl -l
+ 1038  ls -l resource_mon/
+ 1039  git mv resource_mon env_resource
+ 1040  git status
+ 1041  rm -rf __pycache__/
+ 1042  cl -l
+ 1043  git status
+ 1044  mv resource_mon env_resource
+ 1045  cl -l
+ 1046  source env_resource/bin/activate
+ 1047  pip list
+ 1048  more install.sh 
+ 1049  more requirements.txt 
+ 1050  vi requirements.txt 
+ 1051  cl -l
+ 1052  more install.sh 
+ 1053  deactivate
+ 1054  cl -l
+ 1055  rm -rf env_resource/
+ 1056  python3 -m venv env_resource
+ 1057  source env_resource/bin/activate
+ 1058  pip list
+ 1059  ./install.sh 
+ 1060  cl -l
+ 1061  ./install.sh 
+ 1062  deactivate
+ 1063  cl -l
+ 1064  source env_resource/bin/activate
+ 1065  cl -l
+ 1066  ./app.py 
+ 1067  ls
+ 1068  v app.py 
+ 1069  man dd
+ 1070  cl -l
+ 1071  vi app.py 
+ 1072  cl -l
+ 1073  grep matplot *.py
+ 1074  vi monitor.py operations.py 
+ 1075  cl -l
+ 1076  ./app.py 
+ 1077  ls
+ 1078  export PYTHONPATH=.
+ 1079  ./app.py 
+ 1080  unexport PYTHONPATH
+ 1081  export PYTHONPATH=
+ 1082  unset PYTHONPATH
+ 1083  env | grep PYTHON
+ 1084  cl -
+ 1085  cl -l
+ 1086  ./app.py 
+ 1087  cl -l
+ 1088  ./app.py 
+ 1089  fgrep np. *.py
+ 1090  grep numpy *.py
+ 1091  vi monitor.py operations.py
+ 1092  cl -l
+ 1093  ./app.py 
+ 1094  grep psutil *
+ 1095  pip install psutil
+ 1096  cl -l
+ 1097  ./app.py 
+ 1098  c l-l
+ 1099  cl -l
+ 1100  more README.md 
+ 1101  vi README.md 
+ 1102  cl -l
+ 1103  vi operations.py 
+ 1104  git rm operations.py 
+ 1105  git checkout -- operations.py
+ 1106  git rm operations.py 
+ 1107  cl -l
+ 1108  rm -rf __pycache__
+ 1109  cl -l
+ 1110  rm my_logs 
+ 1111  cl -l
+ 1112  git status
+ 1113  cl -l
+ 1114  ./monitor.py 
+ 1115  cl -l
+ 1116  ./monitor.py 
+ 1117  cl -l
+ 1118  vi monitor.py 
+ 1119  mosquitto_sub -t 'cpu_usage/#' -v
+ 1120  mosquitto_sub -t 'cpu_usage/host_1' -v
+ 1121  cl -l
+ 1122  ./monitor.py 
+ 1123  cl -l
+ 1124  ./monitor.py 
+ 1125  ./monitor.py a b c
+ 1126  ./monitor.py a b 3
+ 1127  ./monitor.py
+ 1128  cl -l
+ 1129  ./monitor.py
+ 1130  cl -l
+ 1131  more config.json 
+ 1132  ./monitor.py 
+ 1133  cl -l
+ 1134  ./monitor.py 
+ 1135  c l-l
+ 1136  cl -l
+ 1137  more unit_tests.py 
+ 1138  vi README.md 
+ 1139  cl -l
+ 1140  vi monitor.py 
+ 1141  hostname
+ 1142  python3
+ 1143  hostname
+ 1144  whoami
+ 1145  who
+ 1146  python3
+ 1147  uname -a
+ 1148  python3
+ 1149  cl -l
+ 1150  ls
+ 1151  ;q
+ 1152  ;ls
+ 1153  ls
+ 1154  git add .
+ 1155  git stage .
+ 1156  cl -l
+ 1157  ls -l __pycache__/
+ 1158  more __pycache__/aggregator.cpython-38.pyc 
+ 1159  file __pycache__/aggregator.cpython-38.pyc
+ 1160  cp __pycache__/aggregator.cpython-38.pyc x.o
+ 1161  file x.o
+ 1162  rm x.o
+ 1163  cl -l
+ 1164  echo $EDITOR
+ 1165  export EDITOR=/usr/bin/vim
+ 1166  cl -l
+ 1167  uname -a
+ 1168  python
+ 1169  grep uname *.py
+ 1170  cl -l
+ 1171  grep uname *.py
+ 1172  cl -l
+ 1173  git diff f8fe8d80b255f408f148ed6e88234b391d3d1c8d
+ 1174  git status
+ 1175  cl -l .git
+ 1176  ls
+ 1177  v aggregator.py 
+ 1178  vim ~/.bashrc
+ 1179  ls
+ 1180  v app.py 
+ 1181  source ~/.bashrc
+ 1182  v aggregator.py 
+ 1183  v app.py 
+ 1184  v aggregator.py 
+ 1185  ./aggregator.py 
+ 1186  python aggregator.py 
+ 1187  v a
+ 1188  v aggregator.py 
+ 1189  python aggregator.py 
+ 1190  v aggregator.py 
+ 1191  python aggregator.py 
+ 1192  v aggregator.py 
+ 1193  ./app.py 
+ 1194  v config.json 
+ 1195  v app.py 
+ 1196  v aggregator.py 
+ 1197  v app.py 
+ 1198  v aggregator.py 
+ 1199  python aggregator.py 
+ 1200  black aggregator.py 
+ 1201  v aggregator.py 
+ 1202  black aggregator.py 
+ 1203  v aggregator.py 
+ 1204  black aggregator.py 
+ 1205  v aggregator.py 
+ 1206  black aggregator.py 
+ 1207  python aggregator.py 
+ 1208  v aggregator.py 
+ 1209  python aggregator.py 
+ 1210  v aggregator.py 
+ 1211  python aggregator.py 
+ 1212  v aggregator.py 
+ 1213  ./app.py 
+ 1214  v app.py 
+ 1215  ./app.py 
+ 1216  source env_resource/bin/activate
+ 1217  ./app.py 
+ 1218  v aggregator.py 
+ 1219  python aggregator.py 
+ 1220  v aggregator.py 
+ 1221  python aggregator.py 
+ 1222  black aggregator.py 
+ 1223  v aggregator.py 
+ 1224  black aggregator.py 
+ 1225  v aggregator.py 
+ 1226  black aggregator.py 
+ 1227  ./aggregator.py 
+ 1228  python3 aggregator.py 
+ 1229  v aggregator.py 
+ 1230  python3 aggregator.py 
+ 1231  v aggregator.py 
+ 1232  python3 aggregator.py 
+ 1233  v aggregator.py 
+ 1234  python3 aggregator.py 
+ 1235  v aggregator.py 
+ 1236  python3 aggregator.py 
+ 1237  ./app.py 
+ 1238  V AP
+ 1239  v app.py 
+ 1240  ./app.py 
+ 1241  v aggregator.py 
+ 1242  ./app.py 
+ 1243  cl
+ 1244  git add  
+ 1245  git add .
+ 1246  git stage .
+ 1247  git commit -m "Refactored Aggregator" 
+ 1248  git push origin master
+ 1249  ls
+ 1250  v aggregator.py 
+ 1251  v app.py 
+ 1252  ./app.py 
+ 1253  v app.py 
+ 1254  ./app.py 
+ 1255  ls
+ 1256  cat unit_tests.py 
+ 1257  v unit_tests.py 
+ 1258  black unit_tests.py 
+ 1259  v unit_tests.py 
+ 1260  ls
+ 1261  v aggregator.py 
+ 1262  ./app.py 
+ 1263  v app.py 
+ 1264  ./app.py 
+ 1265  cl -l
+ 1266  vi app.py 
+ 1267  ./app.py 
+ 1268  clear
+ 1269  # Carriage Return
+ 1270  # Line feed
+ 1271  vi z
+ 1272  wc z
+ 1273  vi z
+ 1274  cl -l
+ 1275  od -x z
+ 1276  man ascii
+ 1277  od -X z
+ 1278  man od
+ 1279  od --endian=little -x z
+ 1280  od --endian=big -x z
+ 1281  c -l
+ 1282  cl -l
+ 1283  od --endian=big -x z
+ 1284  view
+ 1285  cl -l
+ 1286  od -x z
+ 1287  od --endian=little-x z
+ 1288  od --endian=little -x z
+ 1289  od --endian=big -x z
+ 1290  c l-l
+ 1291  cl -l
+ 1292  man od
+ 1293  cl -l
+ 1294  od --endian=big -x z
+ 1295  od --endian=big -xc z
+ 1296  cl -l
+ 1297  od --endian=big -xc z
+ 1298  ./app.py 
+ 1299  od --endian=big -xc app.py 
+ 1300  cl -l
+ 1301  od --endian=big -xc z
+ 1302  cl
+ 1303  cl -l
+ 1304  od --endian=big -xc z
+ 1305  cl -l
+ 1306  history
+ 1307  history > tmp.txt
+ 1308  v tmp.txt 
+ 1309  rm tmp.txt 
+ 1310  ls
+ 1311  cl
+ 1312  cl -l
+ 1313  ./app.py 
+ 1314  cl -l
+ 1315  ./app.py 
+ 1316  cl -l
+ 1317  ./app.py 
+ 1318  cl -l
+ 1319  vi monitor.py 
+ 1320  python
+ 1321  cl -l
+ 1322  telnet localhost 1883
+ 1323  cl -l
+ 1324  vi app.py 
+ 1325  cl -l
+ 1326  cl -ltr
+ 1327  vi monitor.py 
+ 1328  cl -l
+ 1329  vi mqtt.py 
+ 1330  mv mqtt.py utilities.py
+ 1331  vi utilities.py 
+ 1332  rm z
+ 1333  cl -l
+ 1334  python
+ 1335  cl -l
+ 1336  grep def utilities.py 
+ 1337  ps ax | grep monitor.py 
+ 1338  kill 122318
+ 1339  cl -l
+ 1340  ./monitor.py 
+ 1341  pip list
+ 1342  python3 ./monitor.py 
+ 1343  cl -l
+ 1344  python monitor.py 
+ 1345  vi utilities.py 
+ 1346  cl -l
+ 1347  python monitor.py 
+ 1348  cl -l
+ 1349  cat utilities.py 
+ 1350  cl -l
+ 1351  vi utilities.py 
+ 1352  ls
+ 1353  history > bob.txt
+ 1354  cat bob.txt 
+ 1355  v bob.txt 
+ 1356  cl
+ 1357  cl-l
+ 1358  cl -l
+ 1359  rm z_bob.txt 
+ 1360  vi utilities.py 
+ 1361  cl -
+ 1362  cl -l
+ 1363  mosquitto_sub -t "#' -v
+ 1364  cl -l
+ 1365  mosquitto_sub -t "#" -v
+ 1366  cl -l
+ 1367  vi utilities.py 
+ 1368  mosquitto_sub -t "#" -v
+ 1369  cl -l
+ 1370  mosquitto_sub -t "#" -v
+ 1371  mosquitto_sub -t "*" -v
+ 1372  cl -l
+ 1373  ./aggregator.py 
+ 1374  cl -l
+ 1375  python ./aggregator.py 
+ 1376  cl -l
+ 1377  python ./aggregator.py 
+ 1378  cl -l
+ 1379  vi README.md 
+ 1380  cl -l
+ 1381  git checkout -- README.md
+ 1382  ps ax | grep monit
+ 1383  cl -l
+ 1384  python ./aggregator.py 
+ 1385  cl -l
+ 1386  more monitor.py 
+ 1387  cl -l
+ 1388  wc utilities.py 
+ 1389  cat utilities.py 
+ 1390  cl -l
+ 1391  vi utilities.py 
+ 1392  cl -l
+ 1393  python ./aggregator.py 
+ 1394  vi aggregator.py 
+ 1395  cl -l
+ 1396  python ./aggregator.py 
+ 1397  python
+ 1398  cl -l
+ 1399  python ./aggregator.py 
+ 1400  cl -l
+ 1401  python ./aggregator.py 
+ 1402  cl -l
+ 1403  python ./aggregator.py 
+ 1404  vi utilities.py 
+ 1405  cl -
+ 1406  cl -l
+ 1407  python ./aggregator.py 
+ 1408  vi aggregator.py 
+ 1409  cl -
+ 1410  lvi utilities.py 
+ 1411  cl -l
+ 1412  vi utilities.py 
+ 1413  [A
+ 1414  vi utilities.py 
+ 1415  cl- l
+ 1416  cl -l
+ 1417  python ./aggregator.py 
+ 1418  ls -l resource*
+ 1419  cl -l
+ 1420  python ./aggregator.py 
+ 1421  cl -l
+ 1422  vi utilities.py 
+ 1423  cl -l
+ 1424  grep -i queue *
+ 1425  vi web_server.py 
+ 1426  git add web_server.py 
+ 1427  cl -l
+ 1428  ls -l ..
+ 1429  alias ls=ls
+ 1430  cd ../weather_server/
+ 1431  cl -l
+ 1432  grep queue *.py
+ 1433  vi app.py 
+ 1434  cl -l
+ 1435  cd -
+ 1436  cl -l
+ 1437  python ./aggregator.py 
+ 1438  cl -l
+ 1439  sqlite3 resource_usage.db 
+ 1440  cl -l
+ 1441  vi utilities.py 
+ 1442  cl -l
+ 1443  python ./web_server.py 
+ 1444  cl -l
+ 1445  python ./web_server.py 
+ 1446  cl -l
+ 1447  python ./web_server.py 
+ 1448  cl -l
+ 1449  vi aggregator.py 
+ 1450  cl -l
+ 1451  python ./web_server.py 
+ 1452  cl -l
+ 1453  python ./web_server.py 
+ 1454  cl -l
+ 1455  python ./web_server.py 
+ 1456  cl -l
+ 1457  ps ax | grep monitor
+ 1458  cl -l
+ 1459  python ./monitor.py &
+ 1460  python ./aggregator.py &
+ 1461  python ./web_server.py 
+ 1462  fg
+ 1463  jobs
+ 1464  cl -
+ 1465  cl -l
+ 1466  git log
+ 1467  look persistance
+ 1468  look persistan
+ 1469  look persiste
+ 1470  cl -l
+ 1471  exit
+ 1472  ls
+ 1473  cd work/
+ 1474  ls
+ 1475  cd cpu_resource_monitor/
+ 1476  ls
+ 1477  source env_resource/bin/activate
+ 1478  ./monitor.py 
+ 1479  python3 monitor.py 
+ 1480  v monitor.py 
+ 1481  python monitor.py 
+ 1482  history 
+ 1483  cd cpu
+ 1484  ls
+ 1485  cd work/
+ 1486  cd cpu_resource_monitor/
+ 1487  ls
+ 1488  source env_resource/
+ 1489  source env_resource/bin/activate
+ 1490  cl
+ 1491  ./monitor.py 
+ 1492  python monitor.py 
+ 1493  cat aggregator.py 
+ 1494  ls
+ 1495  cd work/
+ 1496  ls
+ 1497  cd cpu_resource_monitor/
+ 1498  source env_resource/bin/activate
+ 1499  GET 127.0.0.1:5000/cpu_usage/host_1
+ 1500  ./app.py 
+ 1501  ls
+ 1502  cd work/
+ 1503  ls
+ 1504  cd cpu_resource_monitor/
+ 1505  ls
+ 1506  source env_resource/bin/activate
+ 1507  history | grep tmux
+ 1508  tmux attach -s pair0
+ 1509  tmux attach -t pair0
+ 1510  cd work/cpu_resource_monitor/
+ 1511  ls
+ 1512  history | grep tmux 
+ 1513  tmux attach -t pair1-1
+ 1514  history
+ 1515  mosquitto_pub -t cu/h0 -m "" -r
+ 1516  mosquitto_pub -t cu/h1 -m "" -r
+ 1517  stress
+ 1518  stress --cpu 1
+ 1519  stress --cpu 3
+ 1520  stress --cpu 1
+ 1521  stress --cpu 4
+ 1522  cd work/cpu_resource_monitor/
+ 1523  python monitor.py 
+ 1524  source env_resource/bin/activate
+ 1525  python aggregator.py
+ 1526  v aggregator.py 
+ 1527  python aggregator.py
+ 1528  v aggregator.py 
+ 1529  ls
+ 1530  ping 1.1.1.1
+ 1531  ls
+ 1532  python monitor.py 
+ 1533  history
+ 1534  history > z.txt

@@ -1,5 +1,6 @@
 import json
 import paho.mqtt.client as mqtt
+import os
 import sqlite3
 
 CONFIGURATION_FILENAME = "configuration.json"
@@ -65,3 +66,22 @@ def publish_to_mqtt(mqtt_configuration, payload_as_dictionary, retain=False):
     topic_publish = mqtt_configuration["topic_publish"]
     payload = json.dumps(payload_as_dictionary)
     mqtt_client.publish(topic_publish, payload, retain)
+
+def reset_database():
+#could i make a var for the resource usage script
+    print("checking if the resource usage db exists")
+    if os.path.exists("resource_usage.db"):
+        print("The file exists.")
+        os.system("sh remove_db.sh")
+    else:
+        print("The file does not exist.")
+
+def reset_MQTT_retained():
+#could i make a var for the remove retained script
+    print("checking if the remove script exists")
+    if os.path.exists("remove_retained_mqtt_msgs.sh"):
+        print("The file exists.")
+        os.system("sh remove_retained_mqtt_msgs.sh localhost")
+    else:
+        print("The file does not exist.")
+
